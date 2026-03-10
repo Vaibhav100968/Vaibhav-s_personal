@@ -3,10 +3,30 @@ import { motion, AnimatePresence } from 'framer-motion'
 import AppWindow from '../components/AppWindow'
 
 const notes = [
-  { id: 1, title: 'About Me', content: "Hi! I'm Vaibhav Gollapalli. Write a brief introduction about yourself here \u2014 your background, passions, and what drives you.", pinned: true },
-  { id: 2, title: 'Career Goals', content: 'Describe your short-term and long-term career aspirations here.', pinned: true },
-  { id: 3, title: 'Interests', content: 'Share your interests and hobbies \u2014 technology, music, travel, sports, or anything else that excites you.', pinned: false },
-  { id: 4, title: 'Personal Philosophy', content: 'Share a guiding principle, favorite quote, or personal philosophy that shapes how you approach life and work.', pinned: false },
+  {
+    id: 1,
+    title: 'About Me',
+    content: "I am a student researcher at the Texas Academy of Mathematics and Science collaborating with research labs at the University of North Texas. My work focuses on machine learning systems, edge AI, and computational modeling of physiological signals, with applications in healthcare and real-world sensing systems.\n\nI am particularly interested in building intelligent systems that operate at the intersection of artificial intelligence, hardware, and applied mathematics. My projects range from deploying TinyML models on embedded devices to developing machine learning pipelines for biomedical data and computer vision.\n\nBeyond research, I enjoy exploring software engineering, quantitative systems, and product development. I am driven by curiosity and enjoy working on interdisciplinary problems that combine technology, science, and real-world impact.",
+    pinned: true
+  },
+  {
+    id: 2,
+    title: 'Career Goals',
+    content: "My long term goal is to explore the intersection of technology, mathematics, and real world systems. I want to work across multiple domains including software engineering, quantitative research, product development, finance, and startups to understand how complex systems are built and scaled.\n\nI am particularly interested in exploring careers in software engineering, quantitative finance, investment banking, and the business side of technology. I enjoy both the technical process of building systems and the strategic side of turning ideas into impactful products or companies.\n\nAs I continue developing my skills in artificial intelligence, machine learning, and computational systems, I also want to explore areas such as electrical engineering and hardware systems. Understanding how software, hardware, and business strategy interact will allow me to build technologies that have meaningful real world impact.",
+    pinned: true
+  },
+  {
+    id: 3,
+    title: 'Interests',
+    content: "I enjoy exploring different cultures, sports, and music. I especially enjoy Indian and Thai cuisine, and I love trying new dishes and flavors from both cultures. Food is one of my favorite ways to experience different traditions and communities.\n\nI am also a big fan of basketball, whether it is playing with friends or watching games. The strategy, teamwork, and fast pace of the sport make it something I always enjoy.\n\nMusic is another major interest of mine. I listen to a wide range of hip hop and international music, and some of my favorite artists include J. Cole, Lil Baby, Drake, Sai Abhyankar, and Gunna. Music is something I enjoy while working, coding, traveling, or relaxing, and it plays a big role in my daily routine.",
+    pinned: false
+  },
+  {
+    id: 4,
+    title: 'Personal Philosophy',
+    content: "My personal philosophy comes from Love Yourz by J. Cole. The idea is simple: stop comparing your life to others and appreciate your own journey. I try to focus on loving what I do and giving one hundred percent effort into everything I pursue.",
+    pinned: false
+  },
 ]
 
 function PostItNote({ note, onClick, idx }) {
