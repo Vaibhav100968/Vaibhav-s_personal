@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Award One",
+    "issuer": "Organization Name",
+    "date": "2025",
+    "description": "Description of this award or achievement.",
+    "icon": "trophy"
+  },
+  {
+    "id": 2,
+    "title": "Award Two",
+    "issuer": "Another Organization",
+    "date": "2024",
+    "description": "Description of this award or achievement.",
+    "icon": "star"
+  },
+  {
+    "id": 3,
+    "title": "Award Three",
+    "issuer": "Competition Name",
+    "date": "2024",
+    "description": "Description of this award or achievement.",
+    "icon": "medal"
+  }
+]

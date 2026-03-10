@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "About Me",
+    "content": "Hi! I'm Vaibhav Gollapalli. Write a brief introduction about yourself here — your background, passions, and what drives you.",
+    "date": "March 9, 2026",
+    "pinned": true
+  },
+  {
+    "id": 2,
+    "title": "Career Goals",
+    "content": "Describe your short-term and long-term career aspirations here.",
+    "date": "March 9, 2026",
+    "pinned": true
+  },
+  {
+    "id": 3,
+    "title": "Interests",
+    "content": "Share your interests and hobbies — technology, music, travel, sports, or anything else that excites you.",
+    "date": "March 9, 2026",
+    "pinned": false
+  },
+  {
+    "id": 4,
+    "title": "Personal Philosophy",
+    "content": "Share a guiding principle, favorite quote, or personal philosophy that shapes how you approach life and work.",
+    "date": "March 9, 2026",
+    "pinned": false
+  }
+]

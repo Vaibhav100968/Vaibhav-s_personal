@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Project One",
+    "description": "A brief description of your first project. Replace with your actual project details.",
+    "technologies": ["React", "Node.js", "MongoDB"],
+    "github": "https://github.com/yourusername/project-one",
+    "demo": "https://project-one-demo.com",
+    "icon": "rocket"
+  },
+  {
+    "id": 2,
+    "name": "Project Two",
+    "description": "A brief description of your second project. Replace with your actual project details.",
+    "technologies": ["Python", "TensorFlow", "Flask"],
+    "github": "https://github.com/yourusername/project-two",
+    "demo": "https://project-two-demo.com",
+    "icon": "brain"
+  },
+  {
+    "id": 3,
+    "name": "Project Three",
+    "description": "A brief description of your third project. Replace with your actual project details.",
+    "technologies": ["Swift", "UIKit", "CoreData"],
+    "github": "https://github.com/yourusername/project-three",
+    "demo": "",
+    "icon": "mobile"
+  },
+  {
+    "id": 4,
+    "name": "Project Four",
+    "description": "A brief description of your fourth project. Replace with your actual project details.",
+    "technologies": ["TypeScript", "Next.js", "Prisma"],
+    "github": "https://github.com/yourusername/project-four",
+    "demo": "https://project-four-demo.com",
+    "icon": "globe"
+  }
+]

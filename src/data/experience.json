@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "role": "Software Engineer Intern",
+    "organization": "Company Name",
+    "dates": "Jun 2025 - Aug 2025",
+    "description": "Describe your role and key accomplishments here.",
+    "color": "#007AFF"
+  },
+  {
+    "id": 2,
+    "role": "Research Assistant",
+    "organization": "University Lab",
+    "dates": "Jan 2025 - May 2025",
+    "description": "Describe your role and key accomplishments here.",
+    "color": "#34C759"
+  },
+  {
+    "id": 3,
+    "role": "Teaching Assistant",
+    "organization": "CS Department",
+    "dates": "Aug 2024 - Dec 2024",
+    "description": "Describe your role and key accomplishments here.",
+    "color": "#FF9500"
+  }
+]

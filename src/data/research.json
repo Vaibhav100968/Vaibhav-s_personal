@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Research Topic One",
+    "lab": "Research Lab Name",
+    "advisor": "Dr. Advisor Name",
+    "dates": "Jan 2025 - Present",
+    "description": "Brief description of the research focus and your contributions.",
+    "publications": [],
+    "icon": "folder"
+  },
+  {
+    "id": 2,
+    "title": "Research Topic Two",
+    "lab": "Another Lab Name",
+    "advisor": "Dr. Another Advisor",
+    "dates": "Aug 2024 - Dec 2024",
+    "description": "Brief description of the research focus and your contributions.",
+    "publications": [],
+    "icon": "folder"
+  }
+]
