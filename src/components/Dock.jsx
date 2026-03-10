@@ -20,7 +20,7 @@ const dockApps = [
     icon: <img src={`${import.meta.env.BASE_URL}icons/github.png`} alt="GitHub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />,
   },
   {
-    id: 'music',
+    id: 'music-2',
     label: 'Music',
     icon: <img src={`${import.meta.env.BASE_URL}icons/music.png`} alt="Music" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />,
   },
@@ -34,8 +34,8 @@ export default function Dock({ onAppOpen }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 25 }}
     >
-      {dockApps.map((app) => {
-        const isInternalApp = app.id === 'music'
+      {dockApps.map((app, index) => {
+        const isInternalApp = app.id === 'music' || app.id === 'music-2'
         const Tag = isInternalApp ? motion.button : motion.a
         const props = isInternalApp
           ? { onClick: () => onAppOpen('music') }
@@ -43,7 +43,7 @@ export default function Dock({ onAppOpen }) {
 
         return (
           <Tag
-            key={app.label}
+            key={`${app.id}-${index}`}
             {...props}
             className="flex flex-col items-center gap-1 focus:outline-none"
             whileHover={{ scale: 1.15 }}
