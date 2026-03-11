@@ -1,6 +1,43 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+const PHONE_W = 375
+const PHONE_H = 812
+
 export default function PhoneFrame({ children }) {
+  const [scale, setScale] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const update = () => {
+      const vw = window.innerWidth
+      const vh = window.innerHeight
+
+      if (vw <= 430) {
+        setIsMobile(true)
+        setScale(1)
+      } else {
+        setIsMobile(false)
+        const padY = 40
+        const padX = 80
+        const scaleH = (vh - padY) / PHONE_H
+        const scaleW = (vw - padX) / PHONE_W
+        setScale(Math.min(1, scaleH, scaleW))
+      }
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
+  if (isMobile) {
+    return (
+      <div className="relative w-screen h-screen overflow-hidden">
+        {children}
+      </div>
+    )
+  }
+
   return (
     <div className="relative flex items-center justify-center w-full min-h-screen overflow-hidden">
       {/* Left faded text - "Vaibhav's" */}
@@ -47,13 +84,15 @@ export default function PhoneFrame({ children }) {
       <motion.div
         className="relative overflow-hidden bg-black z-10"
         style={{
-          width: 'var(--phone-width)',
-          height: 'var(--phone-height)',
+          width: `${PHONE_W}px`,
+          height: `${PHONE_H}px`,
           borderRadius: '50px',
           boxShadow: '0 0 0 3px #1a1a1a, 0 0 0 6px #0a0a0a, 0 30px 80px rgba(0,0,0,0.5)',
+          transform: `scale(${scale})`,
+          transformOrigin: 'center center',
         }}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.9 * scale, opacity: 0 }}
+        animate={{ scale: scale, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         {children}

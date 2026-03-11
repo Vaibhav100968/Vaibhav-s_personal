@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --phone-width: 393px;
-  --phone-height: 852px;
+  --phone-width: 375px;
+  --phone-height: 812px;
 }
 
 * {
@@ -76,6 +76,11 @@ body {
     --phone-height: 100vh;
   }
   body {
-    background: transparent;
+    background: #000;
+    overflow: auto;
+  }
+  #root {
+    min-height: 100vh;
+    align-items: flex-start;
   }
 }
