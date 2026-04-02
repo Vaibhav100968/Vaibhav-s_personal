@@ -20,7 +20,7 @@ const experiences = [
   {
     id: 2,
     role: 'Software Engineering Intern',
-    company: 'CORE (SOL)',
+    company: 'CORE (YC S23)',
     type: 'Internship',
     logoGradient: 'linear-gradient(135deg, #1a1a1a, #333)',
     details: [
