@@ -18,11 +18,11 @@ export default function PhoneFrame({ children }) {
         setScale(1)
       } else {
         setIsMobile(false)
-        const padY = 40
+        const padY = 24
         const padX = 80
         const scaleH = (vh - padY) / PHONE_H
         const scaleW = (vw - padX) / PHONE_W
-        setScale(Math.min(1, scaleH, scaleW))
+        setScale(Math.min(0.85, scaleH, scaleW))
       }
     }
     update()
@@ -80,23 +80,30 @@ export default function PhoneFrame({ children }) {
         </div>
       </div>
 
-      {/* Phone */}
-      <motion.div
-        className="relative overflow-hidden bg-black z-10"
-        style={{
-          width: `${PHONE_W}px`,
-          height: `${PHONE_H}px`,
-          borderRadius: '50px',
-          boxShadow: '0 0 0 3px #1a1a1a, 0 0 0 6px #0a0a0a, 0 30px 80px rgba(0,0,0,0.5)',
-          transform: `scale(${scale})`,
-          transformOrigin: 'center center',
-        }}
-        initial={{ scale: 0.9 * scale, opacity: 0 }}
-        animate={{ scale: scale, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
-        {children}
-      </motion.div>
+      {/* Phone - wrapped in a container that accounts for scale */}
+      <div style={{
+        width: `${PHONE_W * scale}px`,
+        height: `${PHONE_H * scale}px`,
+        position: 'relative',
+        zIndex: 10,
+      }}>
+        <motion.div
+          className="absolute top-0 left-0 overflow-hidden bg-black"
+          style={{
+            width: `${PHONE_W}px`,
+            height: `${PHONE_H}px`,
+            borderRadius: '50px',
+            boxShadow: '0 0 0 3px #1a1a1a, 0 0 0 6px #0a0a0a, 0 30px 80px rgba(0,0,0,0.5)',
+            transform: `scale(${scale})`,
+            transformOrigin: 'top left',
+          }}
+          initial={{ scale: 0.9 * scale, opacity: 0 }}
+          animate={{ scale: scale, opacity: 1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          {children}
+        </motion.div>
+      </div>
     </div>
   )
 }

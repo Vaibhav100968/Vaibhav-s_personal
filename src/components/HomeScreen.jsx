@@ -47,10 +47,10 @@ const appConfigs = [
     icon: <img src={`${import.meta.env.BASE_URL}icons/awards.png`} alt="Awards" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />,
   },
   {
-    id: 'music',
-    label: 'Music',
+    id: 'resume',
+    label: 'Resume',
     color: 'transparent',
-    icon: <img src={`${import.meta.env.BASE_URL}icons/music.png`} alt="Music" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />,
+    icon: <img src={`${import.meta.env.BASE_URL}icons/resume.png`} alt="Resume" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />,
   },
 ]
 

@@ -11,6 +11,7 @@ import Experience from './apps/Experience'
 import Research from './apps/Research'
 import Awards from './apps/Awards'
 import Music from './apps/Music'
+import Resume from './apps/Resume'
 
 function App() {
   const [isLocked, setIsLocked] = useState(true)
@@ -37,6 +38,7 @@ function App() {
       <Research isOpen={openApp === 'research'} onClose={handleAppClose} />
       <Awards isOpen={openApp === 'awards'} onClose={handleAppClose} />
       <Music isOpen={openApp === 'music'} onClose={handleAppClose} />
+      <Resume isOpen={openApp === 'resume'} onClose={handleAppClose} />
     </PhoneFrame>
   )
 }

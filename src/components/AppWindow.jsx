@@ -44,12 +44,12 @@ export default function AppWindow({ isOpen, onClose, title, children, headerColo
           {/* Bottom home bar - clickable to go home */}
           <motion.button
             className="absolute bottom-0 left-0 right-0 flex items-end justify-center pb-2 z-10"
-            style={{ height: '34px' }}
+            style={{ height: '26px' }}
             onClick={onClose}
             whileTap={{ scale: 0.95 }}
           >
             <div style={{
-              width: '144px', height: '5px', borderRadius: '9999px',
+              width: '120px', height: '4px', borderRadius: '9999px',
               background: barColor,
             }} />
           </motion.button>
